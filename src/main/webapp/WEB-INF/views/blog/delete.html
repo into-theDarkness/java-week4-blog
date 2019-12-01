@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Delete Blog</h1>
+<h1>Do you want delete blog?</h1>
+<p>
+    <a href="/blogs">Blog list</a>
+</p>
+<form th:action="@{/delete-blog} " th:object="${blog}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>Tittle</td>
+            <td th:text="${blog.name}"></td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td th:text="${blog.description}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete"></td>
+        </tr>
+    </table>
+
+</form>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog list</title>
+</head>
+<body>
+<a href="/create-blog">Create new blog</a>
+<a href="/listcontent">Blog & Content list</a>
+<h1>Blog list</h1>
+<table border="2">
+    <tr>
+        <th>Tittle</th>
+    </tr>
+<th:block th:each="blog:${blogs}">
+    <tr>
+        <td th:text="${blog.name}"> </td>
+    </tr>
+</th:block>
+</table>
+</body>
+</html>
